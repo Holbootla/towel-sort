@@ -1,6 +1,6 @@
-
-// You should implement your task here.
-
 module.exports = function towelSort (matrix) {
-  return [];
+	if (!Array.isArray(matrix) || matrix.length === 0) {
+		return []
+	}
+  return (matrix.map((el, ind) => ind % 2 !== 0 ? el.reverse() : el)).flat()
 }
